@@ -1,0 +1,21 @@
+/*Aim of the program : Find the largest among 3 user entered nos. at the command prompt using
+Java*/
+import java.util.*;
+public class LAB2_1{
+	public static void main(String arg[]){
+		Scanner in= new Scanner(System.in);
+		int[] numbers = new int [3];
+		for (int i=0;i<3;i++){
+
+			System.out.print("Enter number: ");
+			 numbers [i]=in.nextInt();
+		}
+		int large = numbers[0];
+		for (int i =0;i<3; i++){
+			if (large<=numbers[i]){
+				large=numbers[i];
+				}
+			}
+		System.out.println(large);
+		}
+	}
