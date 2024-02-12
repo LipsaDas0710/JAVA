@@ -1,0 +1,40 @@
+//method overloading
+import java.util.*;
+class calculate {
+    //circle
+    public double area (double n1){
+        double r = 3.14 * n1* n1;
+        return r;
+    }
+    // triangle
+    public double area (int n1, int n2){
+        double r = 0.5 * n1 * n2 ;
+        return r;
+    }
+    //square
+    public int area (int n4){
+        int r = n4* n4;
+        return r;
+    }
+
+}
+public class LAB3_5 {
+    public static void main(String a[]) {
+        Scanner sc = new Scanner(System.in);
+        calculate cal =new calculate();
+        System.out.println("enter the radius ");
+        int num1=sc.nextInt();
+        System.out.println("enter the height");
+        int num2=sc.nextInt();
+        System.out.println("enter the base ");
+        int num3=sc.nextInt();
+        System.out.println("enter the side ");
+        int num4=sc.nextInt();
+        double areac = cal.area(num1);
+        double areat =cal.area(num2, num3);
+        int areas = cal.area(num4);
+        System.out.println("area of circle "+areac);
+        System.out.println("area of triangle "+areat);
+        System.out.println("area of square "+areas);
+    }
+}
