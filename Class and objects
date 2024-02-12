@@ -1,0 +1,22 @@
+//class and object
+import java.util.*;
+class box{
+    public int volume(int h, int w,int b){
+        int r= h*w*b;
+        return r;
+    }
+}
+public class LAB3_1{
+    public static void main(String a[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter height");
+        int height =sc.nextInt();
+        System.out.println("enter width");
+        int width=sc.nextInt();
+        System.out.println("enter breadth");
+        int breadth=sc.nextInt();
+        box vol= new box();
+        int result= vol.volume(height,width,breadth);
+        System.out.println("The volume is "+result);
+    }
+}
