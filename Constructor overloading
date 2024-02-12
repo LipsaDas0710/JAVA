@@ -1,0 +1,33 @@
+//constructor overlaoding
+import java.util.*;
+class area{
+    int l;
+    int b;
+    public area(int l, int b){
+
+        this.l=l;
+        this.b=b;
+        int r = l * b;
+        System.out.println(r);
+    }
+    public area(){
+        int r = l * b;
+        System.out.println(r);
+    }
+
+}
+public class LAB3_6 {
+    public static void main(String ar[]) {
+        int l;
+        int b;
+        Scanner sc = new Scanner(System.in);
+		System.out.println("enter the length ");
+		l=sc.nextInt();
+		System.out.println("enter the breadth ");
+        b = sc.nextInt();
+        area a =new area (l, b);
+
+
+
+    }
+}
