@@ -1,0 +1,35 @@
+//user defined exception- NegativeNumberException
+import java.util.*;
+class NegativeNumberException extends Exception{
+    int num;
+    String obj;
+    public NegativeNumberException(String obj){
+        super(obj);
+    }
+    public void processinput(int num){
+        this.num=num;
+        int j=0;
+        try{
+            if (num<0){
+                throw new NegativeNumberException(obj); 
+            }
+            else{
+                j=num*2;
+                System.out.println(j);
+            }
+        } 
+        catch( NegativeNumberException e){
+            System.out.println(e+": number should be positive");
+        }       
+    }
+}
+public class LAB7_3 {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        NegativeNumberException number=new NegativeNumberException(null);
+        System.out.println("enter the number: ");
+        int a=sc.nextInt();
+        number.processinput(a);
+    }
+    
+}
