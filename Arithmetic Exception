@@ -1,0 +1,19 @@
+//Arithmetic Exception
+public class LAB7_2 {
+    public static void main(String[] args) {
+        int i=0;
+        int j=0;
+        try{
+            j=20/i;
+        }
+        catch(ArithmeticException e){
+            System.out.println(e);
+        }
+        finally{
+            j=20/1;
+            System.out.println("Default value: "+j);
+            System.out.println("In Finally block");
+        }
+    }
+    
+}
