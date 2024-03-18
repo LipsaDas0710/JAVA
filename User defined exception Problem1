@@ -1,0 +1,64 @@
+import java.util.Scanner;
+class  InvalidHourException extends Exception{
+    public InvalidHourException(String hour){
+        super(hour);
+    }
+}
+class InvalidMinuteException extends Exception{
+    public InvalidMinuteException(){
+        System.out.println("in");
+    }
+}
+class InvalidSecondException extends Exception{
+    public InvalidSecondException(){
+        System.out.println("out");
+    }
+}
+class time{
+    public String hour;
+    int hrs,min,sec;
+    public void correct_time(int hrs,int min,int sec){
+        this.hrs=hrs;
+        this.min=min;
+        this.sec=sec;
+        try{
+            if (hrs>24 || hrs<0){
+                throw new InvalidHourException(hour);
+            }
+            else if (min>60 || min<0){
+                throw new InvalidMinuteException();
+            }
+            else if (sec>60 || sec<0){
+                throw new InvalidSecondException();
+            }
+            else{
+                System.out.print("Correct time:"+hrs);
+                System.out.print(":"+min);
+                System.out.print(":"+sec);
+            }
+        }
+        catch(InvalidHourException h){
+            System.out.println(h);
+        }
+        catch(InvalidMinuteException m){
+            System.out.println(m);
+        }
+        catch(InvalidSecondException s){
+            System.out.println(s);
+        }
+    }
+}
+
+public class LAB7_4 {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        time t=new time();
+        System.out.println("Enter hours: ");
+        int hrs=sc.nextInt();
+        System.out.println("Enter minutes: ");
+        int min=sc.nextInt();
+        System.out.println("Enter seconds: ");
+        int sec=sc.nextInt();
+        t.correct_time(hrs,min,sec);
+  }
+}
